@@ -50,10 +50,9 @@ const typeDefs = gql`
     count: Int 
   }
 
-
   type Query {
     users( id: Int ): [User]
-    events: [Event]
+    events(categoryId: Int): [Event]
     categories( id: Int, name: String ): [Category]
     categoryEvents: [CategoryEvent]
     eventFeedbacks: [EventFeedback]

@@ -83,7 +83,7 @@ const categoryResolvers = {
                 `);
 
                 return result.recordset.map(row => ({
-                    id: row.category_event_id, // ID de CategoryEvent
+                    id: row.category_event_id, 
                     event: {
                         id: row.event_id,
                         title: row.title,

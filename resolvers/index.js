@@ -3,10 +3,8 @@ const categoryResolvers = require('./category');
 const userResolvers = require('./user');
 const eventFeedbackResolvers = require('./eventFeedback');
 const eventResolvers = require('./event');
-const categoryEventResolvers = require('./CategoryEvent');
+const categoryEventResolvers = require('./ce');
 const countEventCategoryResolver = require('./countEventCategory');
-
-categoryResolvers
 
 const resolversArray = [
     userResolvers,
