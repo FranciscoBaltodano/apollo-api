@@ -11,7 +11,7 @@ const app = express();
 
 app.use(cors());
 app.use(morgan('dev'));
-// app.use(authMiddleware);
+app.use(authMiddleware);
 
 const server = new ApolloServer({
     typeDefs,

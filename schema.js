@@ -20,14 +20,14 @@ const typeDefs = gql`
     description: String
     date_start: Date!
     date_end: Date!
-
     feedbacks: [EventFeedback]
-    categories: [Category]
+    categories: [CategoryEvent]
   }
 
   type Category {
     id: ID!
     name: String!
+    events: [CategoryEvent]
   }
 
   type CategoryEvent {
@@ -45,13 +45,20 @@ const typeDefs = gql`
     feedback_date: Date!
   }
 
-  type Query {
-    users: [User]
-    events: [Event]
-    categories: [Category]
-    eventFeedbacks: [EventFeedback]
+  type CountEventCategory {
+    category: Category
+    count: Int 
   }
 
+
+  type Query {
+    users( id: Int ): [User]
+    events: [Event]
+    categories( id: Int, name: String ): [Category]
+    categoryEvents: [CategoryEvent]
+    eventFeedbacks: [EventFeedback]
+    countEventCategory: [CountEventCategory]
+  }
 `;
 
 module.exports =  typeDefs ;

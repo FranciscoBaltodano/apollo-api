@@ -4,16 +4,17 @@ const userResolvers = require('./user');
 const eventFeedbackResolvers = require('./eventFeedback');
 const eventResolvers = require('./event');
 const categoryEventResolvers = require('./CategoryEvent');
+const countEventCategoryResolver = require('./countEventCategory');
 
 categoryResolvers
 
 const resolversArray = [
     userResolvers,
     categoryResolvers,
-    // eventFeedbackResolvers,
-    // categoryResolvers,
-    // eventResolvers,
-    // categoryEventResolvers
+    eventFeedbackResolvers,
+    eventResolvers,
+    categoryEventResolvers,
+    countEventCategoryResolver
 ]
 
 const resolvers = mergeResolvers( resolversArray );
